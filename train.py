@@ -15,10 +15,10 @@ import json
 def main():
     iris = load_iris()
     X, y = iris.data, iris.target
-    X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
+    X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)#đây là một dòng code để chia tập dữ liệu thành tập huấn luyện và tập kiểm tra với tỷ lệ 80% và 20% tương ứng.
 
     model = LogisticRegression(max_iter=200)
-    model.fit(X_train, y_train)
+    model.fit(X_train, y_train)#đây là một dòng code để huấn luyện mô hình LogisticRegression với tập dữ liệu đã chia thành tập huấn luyện (X_train, y_train).
 
     # Save model
     os.makedirs("artifacts", exist_ok=True)
